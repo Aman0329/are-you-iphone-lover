@@ -1,0 +1,24 @@
+var readLineSync = require("readline-sync");
+var score = 0;
+var name = readLineSync.question("what is your name? ");
+console.log("welcome " + name + " Do you Like Iphones ");
+function quiz(question, answer) {
+  var useranswer = readLineSync.question(question);
+  if (useranswer.toUpperCase() == answer.toUpperCase()) {
+    console.log("nice! you are right");
+    score = score + 1;
+  }
+  else {
+    console.log("opps ! you are wrong");
+    score = score - 1;
+  }
+  console.log("your score is " + score);
+}
+quiz("when did the first iphone come out? ", "2007");
+quiz("which iphone series is launched in 2022?", "iphone14");
+quiz("which is the latest ios version? ", "ios16");
+quiz("which is latest bionic chip launched by apple? ", "A15");
+quiz("which is first iphone launched by apple? ", "iphone 2G");
+quiz("which iphone series is discontinued by apple in 2022?", "Mini Series");
+quiz("what is the highest storage capacity offered in iphones", "1TB");
+
